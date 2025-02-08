@@ -20,22 +20,7 @@ const submitButton = document.getElementById("submitGuess");
 const feedbackElement = document.getElementById("feedback");
 const scoreValueElement = document.getElementById("scoreValue");
 const newGameButton = document.getElementById("newGame");
-function checkGuess() {
-    const guess = parseFloat(guessInput.value);
-    console.log("Guess:", guess); // Add this
 
-    if (isNaN(guess)) {
-        feedbackElement.textContent = "Please enter a valid number.";
-        return;
-    }
-
-    const actualDistance = Math.abs(planet1.distance - planet2.distance);
-    console.log("Actual Distance:", actualDistance); // Add this
-    const difference = Math.abs(guess - actualDistance);
-    console.log("Difference:", difference); // Add this
-
-    // ... rest of your code ...
-}
 
 function getRandomPlanets() {
     planet1 = planets[Math.floor(Math.random() * planets.length)];
